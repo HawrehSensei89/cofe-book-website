@@ -143,8 +143,6 @@ header.scrolled {
     justify-content: center;
 }
 
-.hero__info {}
-
 .hero__subject {
     color: var(--white);
     background: var(--pill-bg);
