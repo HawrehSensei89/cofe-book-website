@@ -1,13 +1,229 @@
 :root {
+    /** بک‌گراندها */
     --cream: #F7F0E4;
+    /* body، منو، درباره‌ی ما، نظرات */
+    --white: #FFFFFF;
+    /* کارت‌ها، بخش کتاب‌ها، کارت فرم، اینپوت‌ها */
     --brown-dark: #2B1D15;
-    --copper: #9A5A25;
-    --copper-hover: #7A4519;
+    /* متن اصلی، بک‌گراند هیرو زیر عکس */
     --green: #2F4A3A;
+    /* بخش رزرو، آواتار نظرات */
     --footer: #1E140F;
+    /* فوتر */
+    --placeholder: #D9C7AE;
+    /* جای عکس تا لود شدن */
+
+    /** رنگ‌های اصلی و هاور */
+    --copper: #9A5A25;
+    /* دکمه‌ها، قیمت‌ها، برچسب تیترها، بوردر فوکوس */
+    --copper-hover: #7A4519;
+    /* هاور دکمه‌ها */
+    --gold: #E3B07A;
+    /* هاور لینک منو، برچسب بخش رزرو */
+    --star: #D9962F;
+    /* ستاره‌های نظرات */
+
+    /** متن و بوردر */
+    --text-muted: #6B5546;
+    /* توضیحات و زیرتیترها */
+    --text-review: #4B3A2E;
+    /* متن کارت‌های نظر */
+    --border: #DCCDB6;
+    /* بوردر اینپوت‌ها */
+
+    /** جلد کتاب‌ها */
+    --cover1-from: #2F4A3A;
+    --cover1-to: #1B2E24;
+    --cover1-text: #E3B07A;
+    --cover2-from: #9A5A25;
+    --cover2-to: #6E3B14;
+    --cover2-text: #F7F0E4;
+    --cover3-from: #3B2A20;
+    --cover3-to: #1E140F;
+    --cover3-text: #D9962F;
+    --cover4-from: #8C3B2F;
+    --cover4-to: #5A2119;
+    --cover4-text: #F7F0E4;
+
+    /** رنگ‌های شفاف */
+    --hero-overlay-start: rgba(20, 12, 8, .78);
+    --hero-overlay-end: rgba(20, 12, 8, .35);
+    --hero-strip: rgba(20, 12, 8, .18);
+    /* نوار اطلاعات پایین هیرو */
+    --pill-bg: rgba(255, 255, 255, .16);
+    /* برچسب روی هیرو */
+    --ghost-hover: rgba(255, 255, 255, .14);
+    /* هاور دکمه‌ی شفاف */
+    --ghost-border: rgba(255, 255, 255, .7);
+    /* بوردر دکمه‌ی شفاف */
+    --focus-ring: rgba(154, 90, 37, .3);
+    /* حلقه‌ی فوکوس فیلدها */
+    --btn-shadow: rgba(154, 90, 37, .35);
+    /* سایه‌ی هاور دکمه */
+    --card-shadow: rgba(43, 29, 21, .06);
+    /* سایه‌ی کارت منو */
+    --card-shadow-hover: rgba(43, 29, 21, .16);
+    --footer-line: rgba(255, 255, 255, .12);
+    /* خط جداکننده‌ی فوتر */
 }
 
 body {
     background: var(--cream);
     color: var(--brown-dark);
+}
+
+
+/* * =====================================  Header Styling ====================================  * */
+
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    align-items: center;
+}
+
+.header__title {
+    color: var(--white);
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 1.6rem;
+}
+
+
+.header__nav-link {
+    color: var(--white);
+    transition: all 0.3s linear;
+
+    &:hover {
+        border-bottom: 0.20rem solid var(--gold);
+        color: var(--gold);
+    }
+}
+
+
+
+header.scrolled {
+    background: rgba(20, 12, 8, .85);
+    backdrop-filter: blur(8px);
+}
+
+/* * =====================================  Hero Styling ====================================  * */
+
+#hero {
+    background: linear-gradient(270deg, var(--hero-overlay-start),
+            var(--hero-overlay-end));
+    position: relative;
+    min-height: 100dvh;
+}
+
+.hero__img {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
+
+.hero__info-container {
+    position: relative;
+    min-height: 100vh;
+    padding: 6rem 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero__info {}
+
+.hero__subject {
+    color: var(--white);
+    background: var(--pill-bg);
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.hero__title {
+    font-weight: bold;
+    font-size: 3.75rem;
+    color: var(--white);
+    line-height: 1.25;
+    margin-bottom: 0.6rem;
+}
+
+.hero__text {
+    color: var(--white);
+    opacity: 0.84;
+    margin-bottom: 1rem;
+}
+
+.hero__btns {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.hero__btn {
+    color: var(--white);
+    border-radius: 40px;
+    padding: 12px 28px;
+    border: 1.5px solid var(--ghost-border);
+    transition: background 0.4s ease,
+        transform 0.4s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        background: var(--ghost-hover);
+    }
+}
+
+.hero__cofe-info {
+    position: absolute;
+    display: flex;
+    gap: 2rem;
+    right: 4rem;
+    left: 4rem;
+    bottom: 2rem;
+    background: var(--hero-strip);
+    backdrop-filter: blur(6px);
+    font-weight: 500;
+    border-radius: 16px;
+    overflow: hidden;
+
+
+}
+
+.hero__cofe-info-section {
+    border-right: 2px solid var(--ghost-hover);
+    padding: 18px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:first-child {
+        border: none;
+    }
+}
+
+
+
+.hero__cofe-info-title {
+    color: var(--white);
+    opacity: 0.7;
+}
+
+.hero__cofe-info-text {
+    color: var(--white);
+    font-weight: 400;
 }

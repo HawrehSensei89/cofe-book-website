@@ -1,9 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!--! ======================== Link Remix Icon ======================== !-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
     <!--! ======================= FavIcons ====================== !-->
     <link
@@ -22,7 +27,82 @@
 
     <!--! ====================== Link CSS File ====================== !-->
     <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/Responsive.css"/>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!--! === === ===  Header === === ===!-->
+    <header id="header">
+      <h2 class="header__title">کافه کتاب برگ</h2>
+
+      <nav>
+        <ul class="header__nav-list">
+          <li>
+            <a href="javascript:void(0)" class="header__nav-link">خانه</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="header__nav-link">منو</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="header__nav-link">کتاب ها</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="header__nav-link">درباره ما</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="header__nav-link">تماس باما</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!--*   burger menu btn  *-->
+      <div class="menu-btn">
+        <label for="burger"><i class="ri-menu-line"></i></label>
+        <input type="checkbox" id="burger" class="burger-menu" />
+      </div>
+
+      <a href="javascript:void(0)" class="btn">رزرو میز</a>
+    </header>
+    <!--! === === ===  Hero === === ===!-->
+    <div id="hero">
+      <img src="./assets/image/hero.jpg" alt="hero image" class="hero__img" />
+
+      <div class="hero__info-container">
+        <div class="hero__info">
+          <p class="hero__subject">کافه و کتاب فروشی</p>
+          <h3 class="hero__title">هر فنجان , یک داستان</h3>
+          <p class="hero__text">
+            قهوه‌ی تازه‌دم، کتاب‌های دست‌چین‌شده و گوشه‌ای آرام برای دور شدن از
+            شلوغی <br />
+            شهر.
+          </p>
+          <div class="hero__btns">
+            <a href="javascript:void(0)" class="btn">رزرو میز</a>
+            <a href="javascript:void(0)" class="hero__btn">مشاهده منو</a>
+          </div>
+        </div>
+        <div class="hero__cofe-info">
+          <section class="hero__cofe-info-section">
+            <h5 class="hero__cofe-info-title">آدرس</h5>
+            <h3 class="hero__cofe-info-text">
+              تهران , زعفرانیه , خیابان گلاله
+            </h3>
+          </section>
+          <section class="hero__cofe-info-section">
+            <h5 class="hero__cofe-info-title">ساعت کاری</h5>
+            <h3 class="hero__cofe-info-text">
+              صبح : ساعت 9 تا 14 <br />
+              بعد از ظهر: ساعت 16 تا 23
+            </h3>
+          </section>
+          <section class="hero__cofe-info-section">
+            <h5 class="hero__cofe-info-title">تلفن رزرو</h5>
+            <h3 class="hero__cofe-info-text">09186581345</h3>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
