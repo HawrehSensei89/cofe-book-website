@@ -1,0 +1,13 @@
+:root {
+    --cream: #F7F0E4;
+    --brown-dark: #2B1D15;
+    --copper: #9A5A25;
+    --copper-hover: #7A4519;
+    --green: #2F4A3A;
+    --footer: #1E140F;
+}
+
+body {
+    background: var(--cream);
+    color: var(--brown-dark);
+}
