@@ -12,3 +12,20 @@
         box-shadow: 0 8px 18px var(--btn-shadow);
     }
 }
+
+
+.title-box {
+    text-align: center;
+    letter-spacing: 0.3rem;
+}
+
+.title{
+   color: var(--copper);
+}
+.title-subject{
+   color: var(--brown-dark);
+   margin-bottom: 0.5rem;
+}
+.title-text{
+    color: var(--text-muted);
+}

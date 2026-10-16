@@ -1,4 +1,4 @@
-
+/** ========================== Responsive Header & Hero =========================  **/
 .menu-btn,
 .burger-menu {
     display: none;
@@ -41,8 +41,8 @@
         padding: 0 1.5rem;
     }
 
-    #header > nav,
-    #header > .btn {
+    #header>nav,
+    #header>.btn {
         display: none;
     }
 
@@ -86,7 +86,7 @@
         content: "\eb99";
     }
 
-    #header:has(#burger:checked) > nav {
+    #header:has(#burger:checked)>nav {
         display: block;
         position: fixed;
         inset: 0;
@@ -113,7 +113,7 @@
         border-bottom-color: var(--gold);
     }
 
-    #header:has(#burger:checked) > .btn {
+    #header:has(#burger:checked)>.btn {
         display: block;
         position: fixed;
         z-index: 1;
@@ -165,11 +165,11 @@
         font-size: 1.125rem;
     }
 
-    #header:has(#burger:checked) > nav {
+    #header:has(#burger:checked)>nav {
         padding: 5rem 1.25rem 7rem;
     }
 
-    #header:has(#burger:checked) > .btn {
+    #header:has(#burger:checked)>.btn {
         right: 1.25rem;
         left: 1.25rem;
     }
@@ -210,5 +210,40 @@
     .hero__btn {
         padding: 10px 22px;
         font-size: 0.9rem;
+    }
+}
+
+/** ========================== Responsive Cofe Menu =========================  **/
+
+@media screen and (min-width: 768px) {
+    #menu {
+        padding: 80px 64px;
+    }
+
+    .menu__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .menu__item {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .menu__item-img {
+        height: 210px;
+        width: 100%;
+        background-position: center center;
+        margin-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .menu__item-info-box {
+        margin-top: 0;
+        padding: 20px;
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: 2;
+        justify-content: space-between;
     }
 }
