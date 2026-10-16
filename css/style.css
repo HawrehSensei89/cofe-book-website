@@ -285,3 +285,104 @@ header.scrolled {
     color: var(--copper);
     font-size: 0.9rem;
 }
+
+/* * =====================================  Book Shelf Styling ====================================  * */
+
+#book-shelf {
+    background: var(--white);
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+.book-shelf__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 2rem 0;
+}
+
+.book-shelf__book-item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    padding: 8px 8px 0;
+}
+
+.book-shelf__book {
+
+    width: 70%;
+    height: 170px;
+    border-radius: 6px 12px 12px 6px;
+    box-shadow: -8px 10px 22px rgba(43, 29, 21, .28), inset -10px 0 0 rgba(0, 0, 0, .2);
+
+
+}
+
+.book-1 {
+    position: relative;
+    background: linear-gradient(160deg, var(--cover1-from), var(--cover1-to));
+
+}
+
+.circle-1 {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid;
+    color: var(--cover1-text);
+    top: 50%;
+    background: transparent;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.book-2 {
+    position: relative;
+    background: linear-gradient(160deg, var(--copper), var(--cover2-to));
+}
+
+.circle-2 {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid;
+    color: var(--cream);
+    top: 50%;
+    background: transparent;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.book-3 {
+    position: relative;
+    background: linear-gradient(160deg, var(--cover3-from), var(--cover3-to));
+
+}
+
+.book-4 {
+    position: relative;
+    background: linear-gradient(160deg, var(--cover4-from), var(--cover4-to));
+}
+
+.book-shelf__book-info {
+    text-align: center;
+}
+
+.book-shelf-book-name {
+    color: var(--brown-dark);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.book-shelf__book-author {
+    color: var(--text-muted);
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 0.9rem;
+}

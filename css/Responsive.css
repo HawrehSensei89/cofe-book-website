@@ -247,3 +247,19 @@
         justify-content: space-between;
     }
 }
+
+/** ========================== Responsive Book Shelf =========================  **/
+
+
+@media screen and (min-width: 768px) {
+
+    .book-shelf__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+    .book-shelf__book {
+        height: 260px;
+        width: 90%;
+    }
+}
