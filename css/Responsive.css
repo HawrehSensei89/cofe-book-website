@@ -333,3 +333,34 @@
         text-align: center;
     }
 }
+
+/** ========================== Responsive Tabel Reservation =========================  **/
+
+@media screen and (min-width: 768px) {
+    #Reservation {
+        display: flex;
+        padding: 80px 64px;
+        height: auto;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .reservation__form {
+        margin-top: 0;
+        margin-bottom: 0;
+        grid-template-columns: 1fr 1fr;
+        width: 45%;
+
+    }
+
+    .reservation__btn {
+        width: 206%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    #Reservation {
+        height: 100dvh;
+    }
+}
