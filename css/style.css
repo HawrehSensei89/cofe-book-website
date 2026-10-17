@@ -289,7 +289,7 @@ header.scrolled {
 /* * =====================================  Book Shelf Styling ====================================  * */
 
 #book-shelf {
-    background: var(--white);
+    /* background: var(--white); */
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -317,6 +317,12 @@ header.scrolled {
     height: 170px;
     border-radius: 6px 12px 12px 6px;
     box-shadow: -8px 10px 22px rgba(43, 29, 21, .28), inset -10px 0 0 rgba(0, 0, 0, .2);
+    transition: transform 0.25s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+
+    }
 
 
 }
@@ -422,4 +428,59 @@ header.scrolled {
         height: 22px;
         background: url("../assets/icon/tik.png") center / contain no-repeat;
     }
+}
+
+/* * =====================================  Comments Styling ====================================  * */
+
+#comments {
+    width: 100%;
+    padding: 32px 20px;
+    margin: 0 auto;
+}
+
+.comments__comment-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 2rem 0;
+}
+
+.comments__comment {
+    background: var(--white);
+    border-radius: 18px;
+    display: grid;
+    gap: 16px;
+    padding: 28px;
+    box-shadow: 0 2px 10px var(--card-shadow);
+}
+
+.comments__stars {
+    display: flex;
+    gap: 5px;
+    color: var(--cover3-text);
+}
+
+.comments__Customer-text {
+    color: var(--brown-dark);
+    font-weight: 400;
+}
+
+.comments__Customer-box {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.comments__Customer-name {color: var(--brown-dark);font-weight: 700;font-size: 1rem;}
+
+.comments__Customer-profile {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--cover1-from);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
 }
