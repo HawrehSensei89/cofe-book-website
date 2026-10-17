@@ -263,3 +263,50 @@
         width: 90%;
     }
 }
+
+
+
+/** ========================== Responsive About =========================  **/
+
+@media screen and (min-width: 768px) {
+    #about {
+        flex-direction: row;
+        padding: 80px 64px;
+        gap: 72px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about__img {
+        height: 420px;
+        overflow: hidden;
+        width: 50%;
+    }
+
+    .about__desktop-box {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+        text-align: right;
+    }
+
+    .title-box {
+        text-align: right;
+    }
+
+    .about__list {
+        margin-top: 0;
+    }
+
+    .title-subject {
+        font-size: 40px;
+    }
+
+    .title-text {
+        margin: 0 0 48px;
+        color: #6B5546;
+        font-size: 16px;
+        line-height: 1.9;
+    }
+}
