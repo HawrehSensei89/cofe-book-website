@@ -34,7 +34,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
 
     #header {
         height: 64px;
@@ -246,6 +246,17 @@
         grid-template-columns: 2;
         justify-content: space-between;
     }
+
+    .menu__item-info-text {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .menu__item-info-price {
+        grid-column: 2;
+        grid-row: 1;
+        white-space: nowrap;
+    }
 }
 
 /** ========================== Responsive Book Shelf =========================  **/
@@ -286,8 +297,9 @@
 
     .about__img {
         height: 420px;
-        overflow: hidden;
-        width: 50%;
+        flex: 1;
+        min-width: 0;
+        object-fit: cover;
     }
 
     .about__desktop-box {
@@ -296,9 +308,10 @@
         grid-template-columns: 1fr;
         align-items: flex-start;
         text-align: right;
+        flex: 1;
     }
 
-    .title-box {
+    #about .title-box {
         text-align: right;
     }
 
@@ -329,8 +342,8 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .title-box {
-        text-align: center;
+    .comments__Customer-profile {
+        flex: none;
     }
 }
 
@@ -339,28 +352,53 @@
 @media screen and (min-width: 768px) {
     #Reservation {
         display: flex;
+        flex-direction: column;
+        gap: 2rem;
         padding: 80px 64px;
-        height: auto;
-        align-items: center;
-        width: 100%;
     }
 
-
     .reservation__form {
-        margin-top: 0;
-        margin-bottom: 0;
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
         grid-template-columns: 1fr 1fr;
-        width: 45%;
-
     }
 
     .reservation__btn {
-        width: 206%;
+        grid-column: 1 / -1;
+        width: 100%;
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 1024px) {
     #Reservation {
-        height: 100dvh;
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    #Reservation .title-box {
+        flex: 1;
+        text-align: right;
+    }
+
+    .reservation__form {
+        flex: 1.2;
+        max-width: none;
+        margin: 0;
+    }
+}
+
+
+/** ========================== Responsive Footer =========================  **/
+@media screen and (min-width: 768px) {
+
+    #footer {
+        padding: 64px 64px 24px;
+    }
+
+    .footer__links-title-container {
+        grid-template-columns: 1.4fr repeat(3, 1fr);
+        gap: 40px;
     }
 }

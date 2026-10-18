@@ -494,7 +494,6 @@ header.scrolled {
 
 #Reservation {
     padding: 32px 20px;
-    height: 100dvh;
     background: var(--green);
     margin: 0 auto;
 
@@ -548,4 +547,73 @@ header.scrolled {
 
 #number::-webkit-inner-spin-button {
     display: none;
+}
+
+
+
+
+/* * =====================================  Footer Styling ====================================  * */
+
+#footer {
+    width: 100%;
+    padding: 40px 20px 24px;
+    background: var(--footer);
+    color: var(--cream);
+    margin: 0 auto;
+
+    .title-box {
+        text-align: right;
+    }
+
+    .title-subject {
+        color: var(--cream);
+    }
+
+    .title-text {
+        color: var(--cream);
+        opacity: 0.85;
+    }
+}
+
+.footer__links-title-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+
+}
+
+
+
+
+
+
+.footer__link-section {
+    font-size: 0.9rem;
+}
+
+.footer__section-title {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.footer__section-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__section-list-item {
+    color: var(--cream);
+    font-weight: 500;
+    font-size: 0.86rem;
+    opacity: 0.8;
+}
+
+.copyright-text {
+    border-top: 2px solid var(--footer-line);
+    margin-top: 40px;
+    padding-top: 20px;
+    opacity: 0.6;
 }

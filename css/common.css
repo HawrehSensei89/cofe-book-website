@@ -6,6 +6,7 @@
     font-weight: 500;
     color: var(--white);
     border: none;
+    cursor: pointer;
 
     &:hover {
         background: var(--copper-hover);
